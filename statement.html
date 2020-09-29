@@ -56,12 +56,13 @@
                     Cookies.remove('id');
                     Cookies.remove('isGuest');
                     Cookies.remove('frame');
+                    Cookies.remove('nextState');
                     document.location.replace("index.html");
                 });
 
                 $("#exitLink").on("click", function(){
                     Cookies.set('nextState', 'exit');
-                    document.location.replace("index.html");
+                    document.location.replace("exit.html");
                 });
 
                 // Submittion
@@ -113,6 +114,7 @@
                         });
                     });
                 });
+                document.location.replace("exit.html");
             });
         </script>
     </body>

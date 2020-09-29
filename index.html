@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-        <title>הצהרת בריאות | המכללות הצבאיות</title>
-        <!-- <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"> -->
-        <!-- <link rel="stylesheet" href="lib/custom/theme-style.css"> -->
+        <title>המכללות הצבאיות | הצהרת בריאות</title>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/custom/theme-style.css">
     </head>
     <body>
         <!-- Theme Source - https://bootsnipp.com/snippets/dldxB -->
@@ -15,34 +15,29 @@
                 <form id="mainForm">
                     <input type="text" class="fadeIn second text-right" id="nameInput" placeholder="מה שמך?" required>
                     <input type="text" class="fadeIn second text-right" id="idInput" placeholder="תעודת זהות" required>
-                    <select id="isGuestSelect" class="fadeIn third text-right text-secondary" required>
+                    <select id="isGuestSelect" class="selectors fadeIn third text-right text-secondary" required>
                         <option value="" hidden disabled selected>שיוך</option>
                         <option>אורח</option>
                         <option>מכללות</option>
                     </select>
-                    <select id="frameSelect" class="fadeIn third text-right text-secondary">
+                    <select id="frameSelect" class="selectors fadeIn third text-right text-secondary">
                         <option value="" hidden disabled selected>לאיזה מסגרת אתה שייך?</option>
                         <option>לשכת מפקד המכללות</option>
                         <option>לשכת מפקד פו"ם</option>
-                        <option class="course">מב"ל</option>
-                        <option class="course">פו"ם אלון</option>
-                        <option class="course">פו"ם אפק</option>
-                        <option class="course">מלט"ק</option>
-                        <option class="course">בית הספר לפיקוד לנגדים</option>
-                        <option>מלו"פ</option>
+                        <option>מב"ל</option>
+                        <option>תא"לים"</option>
+                        <option>פו"ם אלון</option>
+                        <option>פו"ם אפק</option>
+                        <option>מלט"ק</option>
+                        <option>בית הספר לפיקוד לנגדים</option>
+                        <option>הקתדרה</option>
                         <option>לוגיסטיקה</option>
                         <option>הדרכה</option>
-                        <option>תחקור</option>
-                        <option>משא"ן"</option>
+                        <option>ממת"מ"</option>
+                        <option>משא"ן</option>
                         <option>מערכות</option>
                         <option>מרכז דדו</option>
-                        <option>מנהלת התרגילים</option>
                         <option>עובדי קבלן</option>
-                    </select>
-                    <select id="innerSelect" class="fadeIn third text-right text-secondary">
-                        <option value="" hidden disabled selected>שייכות פנימית</option>
-                        <option>חניך</option>
-                        <option>סגל וחיילים</option>
                     </select>
                     <input type="submit" class="fadeIn fourth mt-3" value="כנס"></input>
                 </form>
@@ -57,5 +52,11 @@
         <script src="lib/custom/toggle-isGuest-fields.js" type="text/javascript"></script>
         <script src="lib/custom/index-redirect-to-statment.js" type="text/javascript"></script>
         <script src="lib/custom/index-submission.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $("select").on("change", function(){
+                $(this).removeClass("text-secondary");
+            });
+        </script>
     </body>
 </html>

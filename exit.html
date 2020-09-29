@@ -62,6 +62,7 @@
                 // Submittion
                 $('.deliverBtn').on('click', function(e){
                     Cookies.set('nextState', 'entry');
+
                     e.preventDefault();
                     var feelOK = $(this).attr('value');
 
@@ -107,6 +108,8 @@
                             timer: 3000
                         });
                     });
+
+                    document.location.replace("index.html");
                 });
             });
         </script>

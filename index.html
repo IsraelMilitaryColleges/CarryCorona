@@ -25,7 +25,7 @@
                         <option>לשכת מפקד המכללות</option>
                         <option>לשכת מפקד פו"ם</option>
                         <option>מב"ל</option>
-                        <option>תא"לים"</option>
+                        <option>תא"לים</option>
                         <option>פו"ם אלון</option>
                         <option>פו"ם אפק</option>
                         <option>מלט"ק</option>
@@ -33,7 +33,7 @@
                         <option>הקתדרה</option>
                         <option>לוגיסטיקה</option>
                         <option>הדרכה</option>
-                        <option>ממת"מ"</option>
+                        <option>ממת"מ</option>
                         <option>משא"ן</option>
                         <option>מערכות</option>
                         <option>מרכז דדו</option>
@@ -57,6 +57,8 @@
             $("select").on("change", function(){
                 $(this).removeClass("text-secondary");
             });
+
+            Cookies.set('nextState', 'exit');
         </script>
     </body>
 </html>

@@ -15,15 +15,12 @@
         <div class="wrapper fadeInDown">
             <div id="formContent">
                 <h4 class="fadeIn first mt-4 mb-4">הצהרת בריאות יומית - המכללות הצבאיות </h4>
-                <form id="mainForm" class="text-right">
-                        <label class="fadeIn second form-check-label">האם את/ה מחויב/ת בבידוד על-פי הנחיות משרד הבריאות? האם את/ה סובל/ת, או סבלת במהלך 48 השעות האחרונות מהתסמינים הבאים: חום (38+), שיעול / כאב גרון, קוצר נשימה, אובדן חוש הטעם או הריח? האם באת במגע עם חולה מאומת שנדרש להיות בבידוד כיום? האם את/ה נדרש/ת לביצוע בדיקת קורונה או ממתינ/ה לתשובה לבדיקת קורונה שנלקחה ממך? האם גורם כלשהו מבני ביתך ממתין לתשובות לבדיקת קורונה שנלקחה מהם?</label>
-                        <input type="radio" class="fadeIn third form-check-input" value="Yes" required>
-                        <input type="radio" class="fadeIn third form-check-input" value="No" required>
-                        <input type="submit" class="fadeIn fourth mt-3" value="כנס"></input>
+                <form id="mainForm">
+                    <input type="submit" class="fadeIn fourth mt-3" value="צא מהבסיס"></input>
                 </form>
                 <div id="formFooter">
                     <a id="logoutLink" class="underlineHover" href="#">נרשם עבור אדם אחר?</a>
-                    <a id="exitLink" class="underlineHover" href="#">התחברת מטלפון אחר וזקוק לטופס היציאה?</a>
+                    <a id="entryLink" class="underlineHover" href="#">התחברת מטלפון אחר וזקוק לטופס הכניסה?</a>
                 </div>
             </div>
         </div>
@@ -45,8 +42,8 @@
                     document.location.replace("index.html");
                 }
 
-                if(Cookies.get('nextState') == "exit"){
-                    document.location.replace("exit.html");
+                if(Cookies.get('nextState') == "entry"){
+                    document.location.replace("statment.html");
                 }
 
                 $("#logoutLink").on("click", function(){
@@ -56,16 +53,15 @@
                     Cookies.remove('frame');
                     document.location.replace("index.html");
                 });
-                    </div>
 
-                $("#exitLink").on("click", function(){
-                    Cookies.set('nextState', 'exit');
+                $("#entryLink").on("click", function(){
+                    Cookies.set('nextState', 'entry');
                     document.location.replace("index.html");
                 });
 
                 // Submittion
                 $('.deliverBtn').on('click', function(e){
-                    Cookies.set('nextState', 'exit');
+                    Cookies.set('nextState', 'entry');
                     e.preventDefault();
                     var feelOK = $(this).attr('value');
 
